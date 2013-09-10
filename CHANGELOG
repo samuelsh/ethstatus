@@ -1,0 +1,42 @@
+v0.4.3
+
+  * Update FSF address in COPYRIGHT.
+  * Rebuild the tarball with Debian packaging system.
+
+v0.4.2
+
+  * Manpage added
+
+v0.4.1
+
+  * Minor code cleanups
+
+v0.4.0
+
+Improved and bug fixed version by Christoph Haas <email@christoph-haas.de>.
+
+  * Interface names are no longer restricted to eth*
+  * Command line options displayed when running with "-h" or when running
+    with invalid arguments
+  * Interface speed now also selectable in absolute values
+    by using the "-S" option (e.g. -S 128k)
+  * Removed the "runonboot" program (you are free to start ethstatus
+    manually from the /etc/inittab if you miss this feature)
+  * Removed global configuration file /etc/ethstatus.cfg
+    (ethstatus runs well with command line options only)
+  * Removed email check
+  * Scaling of bytes/KB/MB units is computed automatically
+  * Uses getopt to prevent segmentation faults when parsing
+    command-line argument
+  * Removed the options "--bytes", "--packets", "--errors"
+    and "--ipaddress" as this information can be fetched with ifconfig.
+
+v0.3.0
+
+Released Version With some Changes:
+Graphic is now calibrated
+Added 64kbyte and 128kbyte connection
+
+v0.2.0
+
+First Release

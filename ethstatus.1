@@ -1,0 +1,57 @@
+.\"                                      Hey, EMACS: -*- nroff -*-
+.\" First parameter, NAME, should be all caps
+.\" Second parameter, SECTION, should be 1-8, maybe w/ subsection
+.\" other parameters are allowed: see man(7), man(1)
+.TH ETHSTATUS 1 "May  1, 2003"
+.\" Please adjust this date whenever revising the manpage.
+.\"
+.\" Some roff macros, for reference:
+.\" .nh        disable hyphenation
+.\" .hy        enable hyphenation
+.\" .ad l      left justify
+.\" .ad b      justify to both left and right margins
+.\" .nf        disable filling
+.\" .fi        enable filling
+.\" .br        insert line break
+.\" .sp <n>    insert n+1 empty lines
+.\" for manpage-specific macros, see man(7)
+.SH NAME
+ethstatus \- Console-based ethernet statistics monitor
+.SH SYNOPSIS
+.B ethstatus
+[ -h ]
+[ -i interface ]
+[ -v videomode ]
+[ -S bps[k|m|g] ]
+[ -s speed ] (backward compatibility)
+.SH DESCRIPTION
+.B ethstatus
+is a console-based monitoring utility for displaying
+statistical data of the ethernet interface on a quantity basis.
+.SH OPTIONS
+The following options can be provided:
+.TP
+.B \-i
+Specify the ethernet interface which shall be monitored. Default is 'eth0'.
+.TP
+.B \-v
+Set the video mode used by curses. Possible choices are 'vga' (the default)
+and 'mono' (useful for black-and-white monitors).
+.TP
+.B \-S
+Set the maximum network speed in bits per second. ethstatus knows about
+the kilo (k), mega (m) and giga (g) modifiers. So you can specify the
+speed as e.g. 64k or 100m or 1g.
+.TP
+.B \-s
+Set the maximum network speed. Possible values are '10' (=10 Mbps),
+\'100' (=100 Mbps), '64' (=64 kbps), '128' (=128 kbps), 256 (=256 kbps),
+\'768' (=768 kbps) or '1540' (=1540 kbps). This option is provided for
+backward compatibility to prior versions of ethstatus. Please use the
+-S parameter instead.
+.TP
+.SH AUTHORS
+The original program was written by Gabriel Montenegro
+<johnpetrucci@users.sourceforge.net>. Bug fixes, code cleanup, different
+improvements and this manual page were provided by Christoph Haas
+<email@christoph-haas.de> for the Debian GNU/Linux system.
